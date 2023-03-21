@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>School News</title>
+    </head>
+
+    <body style="background-color:yellow;">
+        <h1><center>School News</center></h1>
+
+        <div>
+            {% if news %}
+                {% for new in news %}
+                    <h1>{{ new.title }}</h1>
+                    <i><b>by {{ new.author }}. {{ new.date }}</b></i>
+                    <p>{{ new.text }}</p>
+                {% endfor %}
+            {% else %}
+                <strong>There are no news articles at the moment</strong>
+            {% endif %}
+        </div>
+    </body>
+</html>
